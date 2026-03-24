@@ -1,5 +1,3 @@
-
-
 # Register your models here.
 from django.contrib import admin
 from .models import Parent, Student
@@ -26,4 +24,4 @@ class StudentAdmin(admin.ModelAdmin):
  search_fields = ('first_name', 'last_name', 'student_id',
  'student_class', 'admission_number')
  list_filter = ('gender', 'student_class', 'section')
- readonly_fields = ('student_image',)
+#  readonly_fields = ('student_image',)

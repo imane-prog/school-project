@@ -27,8 +27,7 @@ class Student(models.Model):
  mobile_number = models.CharField(max_length=15)
  admission_number = models.CharField(max_length=20)
  section = models.CharField(max_length=10)
- student_image = models.ImageField(
- upload_to='students/', blank=True)
+ student_image = models.CharField(max_length=500, blank=True, null=True)
  parent = models.OneToOneField(
  Parent, on_delete=models.CASCADE)
 

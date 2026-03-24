@@ -90,18 +90,25 @@
                      <li class="submenu active">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="index.html" class="active">Admin Dashboard</a></li>
-                           <li><a href="teacher-dashboard.html">Teacher Dashboard</a></li>
-                           <li><a href="student-dashboard.html">Student Dashboard</a></li>
+                           <li><a href="{% url 'index' %}" class="active">Admin Dashboard</a></li>
+                           <li><a href="{% url 'teacher_dashboard' %}">Teacher Dashboard</a></li>
+                           <li><a href="{% url 'student_dashboard' %}">Student Dashboard</a></li>
                         </ul>
                      </li>
+                     <!-- Dans le sidebar, section "Main Menu" -->
                      <li class="submenu">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="">Student List</a></li>
-                           <li><a href="student-details.html">Student View</a></li>
-                           <li><a href="">Student Add</a></li>
-                           <li><a href="edit-student.html">Student Edit</a></li>
+                           <li><a href="{% url 'student_list' %}">
+                                 <i class="fas fa-list"></i> Student List
+                              </a></li>
+                           <li><a href="{% url 'student_dashboard' %}">Student Dashboard</a></li>
+                           <li><a href="{% url 'add_student' %}">
+                                 <i class="fas fa-plus-circle"></i> Student Add
+                              </a></li>
+                           <!-- Ces liens seront ajoutés plus tard quand les vues seront prêtes -->
+                           <!-- <li><a href="{% url 'view_student' 0 %}">Student View</a></li> -->
+                           <!-- <li><a href="{% url 'edit_student' 0 %}">Student Edit</a></li> -->
                         </ul>
                      </li>
                      <li class="submenu">
